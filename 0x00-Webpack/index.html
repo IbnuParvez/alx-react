@@ -8,7 +8,7 @@
 <body>
 <p>trial</p>
 <script>
-    let grade = prompt("What's your grade?");
+    let grade = prompt(Number("What's your grade?"));
     let result;
 
     switch (true) {
@@ -20,8 +20,8 @@
             break;
         default:
             result = "Fail";
-            document.write("Your score is " + grade + ", and thus your result " + result);
     }
+    document.write("Your score is " + grade + ", and thus your result " + result);
 </script>
 </body>
 </html>
