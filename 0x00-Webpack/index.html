@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web Page</title>
+</head>
+<body>
+<p>trial</p>
+<script>
+    let grade = prompt("What's your grade?");
+    var result;
+
+    switch (grade) {
+        case "A":
+            result = "Excellent";
+            break;
+        case "B":
+            result = "Good";
+            break;
+        default:
+            result = "Fail";
+            document.write("Your score is " + grade + ", and thus your result " + result);
+    }
+</script>
