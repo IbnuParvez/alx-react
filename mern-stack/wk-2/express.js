@@ -9,6 +9,10 @@ let books = [
 	{ id: 2, title: 'Harry Potter', author: 'JK Rowling'}
 ];
 
+app.get('/books', (req, res) => {
+	res.json(books);
+});
+
 app.post('/books', (req, res) => {
 	const newBooks = {
 	id: books.length + 1,
@@ -18,6 +22,10 @@ app.post('/books', (req, res) => {
 	books.push(newBooks);
 	res.status(201).json(newBooks);
 });
+
+if(!title || !author) {
+		res.status(400).json({message: 'Provide title and author'});
+};
 
 app.listen(PORT, () => {
 	console.log(`Server is running on http://localhost:${PORT}`);
