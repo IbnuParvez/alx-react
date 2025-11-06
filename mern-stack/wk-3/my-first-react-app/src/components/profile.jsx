@@ -11,9 +11,9 @@ function Profile(props){
       boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
       textAlign: 'center'
     	}}>
-      <h2>{firstName} {lastName}</h2>
-      <p>Age: {age}</p>
-      <p>Hello {firstName}! Nice to meet you 👋</p>
+      <h2>{props.firstName} {props.lastName}</h2>
+      <p>Age: {props.age}</p>
+      <p>Hello {props.firstName}! Nice to meet you 👋</p>
     	</div>
 	);
 }
