@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Student = require('./models/student');
+const Student = require('../models/student');
 
 router.get('/', async (req, res) => {
 	try {
@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
 router.post('/', async(req, res) => {
 	const { name, age, email } = req.body;
 	try {
-		const student = new Student({ name. age, email});
+		const student = new Student({ name, age, email});
 		const saved = await student.save();
 		res.status(201).json(saved);
 	} catch (error) {
