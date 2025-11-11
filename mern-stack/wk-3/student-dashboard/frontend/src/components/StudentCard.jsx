@@ -36,5 +36,5 @@ export default function StudentCard({ student, onEdit, onDelete}){
 		</form>
 		)}
 	</div>
-	)
-};
+	);
+}
