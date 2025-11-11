@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-export default function StudentForm(){
+export default function StudentForm({onSubmit}){
 
 const [ form, setForm ] = useState({name:"", email:"", age:""});
 
