@@ -3,7 +3,7 @@ const Note = require('../models/Notes');
 const router = express.Router();
 
 router.get('/', async(req, res) => {
-  const { userId } = req.body;
+  const { userId } = req.query;
   const filter = userId ? { userId } : {};
   const notes = await Note.find(filter).sort({ createdAt: -1});
   res.json(notes);

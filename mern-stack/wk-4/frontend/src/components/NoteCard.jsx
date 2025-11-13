@@ -6,7 +6,7 @@ import { TextArea } from "./ui/textarea";
 
 export default function NoteCard({ note, onSave, onDelete}){
   const [editing, setEditing] = useState(false);
-  const [draft, setDrafting] = useState({ title: note.title, content: note.content});
+  const [draft, setDraft] = useState({ title: note.title, content: note.content});
 
   return (
     <Card className="overflow-hidden">
@@ -15,7 +15,7 @@ export default function NoteCard({ note, onSave, onDelete}){
       <>
       <h3 className="text-lg font-semibold">{note.title}</h3>
       <div className="flex gap-2">
-        <button className="bg-slate-600 hover:bg-slate-700" onClick={() => setEditing(true)}>Edit</button>
+        <button className="bg-slate-600 hover:bg-slate-700" onClick={() => { setDraft({ title: note.title, content: note.content }); setEditing(true); }}>Edit</button>
         <button className="bg-red-600 text-white hover:bg-red-700" onClick={() => onDelete(note._id)}>Delete</button>
       </div>
       </>

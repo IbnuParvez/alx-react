@@ -18,12 +18,12 @@ export const NotesAPI = {
   },
 
   update: async(id, payload) => {
-    const res = await client.put(`/api/notes${id}`, payload);
+    const res = await client.put(`/api/notes/${id}`, payload);
     return res.data;
   },
 
   remove: async(id) => {
-    const res = await client.delete(`/api/notes${id}`);
+    const res = await client.delete(`/api/notes/${id}`);
     return res.data;
   }
 }
