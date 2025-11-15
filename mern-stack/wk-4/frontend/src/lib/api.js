@@ -4,6 +4,7 @@ const API = import.meta.env.VITE_API_URL;
 const client = axios.create({
   baseURL: API,
   headers:{"Content-Type": "application/json"}
+  // add a timeout so frontend doesn't hang indefinitely if backend/Mongo is unresponsive
 });
 
 export const NotesAPI = {

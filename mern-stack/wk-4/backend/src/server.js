@@ -20,4 +20,9 @@ app.use('/api/notes', noteRouter);
 
 const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, () => console.log(`The app is runnning on server at http://localhost:${PORT}`));
+connectDB().then(() => {
+  app.listen(PORT, () => console.log(`The app is running on server at http://localhost:${PORT}`));
+}).catch(err => {
+  console.error("Failed to connect to database", err);
+  process.exit(1);
+});
